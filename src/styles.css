@@ -1,0 +1,11 @@
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+  background-color: #3d3f40;
+  font-family: "Rubik";
+}
+
+* {
+  margin: 0;
+}
