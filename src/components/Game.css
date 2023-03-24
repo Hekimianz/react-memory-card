@@ -1,0 +1,8 @@
+.game--cont {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  gap: 50px;
+  margin-top: 40px;
+}

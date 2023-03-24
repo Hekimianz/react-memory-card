@@ -9,3 +9,8 @@ body {
 * {
   margin: 0;
 }
+
+.main--cont {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,23 @@
+.card--cont {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  color: #f23d3d;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.card--img {
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+  background-color: #1f1f20;
+  margin-bottom: 5px;
+}
+
+.card--cont:hover {
+  transform: scale(1.1);
+}
