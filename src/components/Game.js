@@ -4,8 +4,9 @@ import { nanoid } from "nanoid";
 import "./Game.css";
 export default function Game(props) {
   const [results, setResults] = React.useState([]);
+  const [usedCards, setUsedCards] = React.useState([]);
 
-  const level = 5;
+  const level = 3;
   function shuffle(array) {
     const arr = array.sort(() => Math.random() - 0.5);
     const arr2 = arr.sort(() => Math.random() - 0.5);
@@ -47,8 +48,27 @@ export default function Game(props) {
     });
   }
 
+  function checkClicked(name) {
+    if (usedCards.includes(name)) {
+      props.gameOverHandler();
+    } else {
+      setUsedCards((prevData) => prevData.concat(name));
+    }
+  }
+
+  function checkIfWin() {
+    if (usedCards.length === level) {
+      console.log("win");
+    }
+  }
+
+  function clickCard(name) {
+    shuffleOnClick();
+    checkClicked(name);
+  }
+  checkIfWin();
   let cards = results.map((item) => {
-    return <Card handleClick={shuffleOnClick} key={nanoid()} data={item} />;
+    return <Card handleClick={clickCard} key={nanoid()} data={item} />;
   });
 
   return <div className="game--cont">{cards}</div>;

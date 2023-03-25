@@ -15,7 +15,7 @@ export default function Card(props) {
   }, []);
 
   return (
-    <div onClick={props.handleClick} className="card--cont">
+    <div onClick={() => props.handleClick(str)} className="card--cont">
       <img
         className="card--img"
         src={props.data.sprites.front_default}

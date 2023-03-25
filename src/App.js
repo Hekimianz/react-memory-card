@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Game from "./components/Game";
 export default function App() {
   const [data, setData] = React.useState([]);
+  const [gameOver, setGameOver] = React.useState(false);
   React.useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
       .then((resp) => resp.json())
@@ -12,10 +13,28 @@ export default function App() {
     return item;
   });
 
+  function gameOverHandler(obj) {
+    setGameOver({
+      isOver: true,
+    });
+  }
+
+  function resetGame() {
+    setGameOver(false);
+  }
+
   return (
     <div className="main--cont">
       <Header />
-      <Game data={results} />
+      {!gameOver.isOver && (
+        <Game
+          data={results}
+          isGameOver={gameOver}
+          gameOverHandler={gameOverHandler}
+        />
+      )}
+      {gameOver.isOver && <button onClick={resetGame}>play again</button>}
+      <footer>Made by Aram Hekimian</footer>
     </div>
   );
 }
