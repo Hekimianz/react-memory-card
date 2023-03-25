@@ -13,10 +13,8 @@ export default function App() {
     return item;
   });
 
-  function gameOverHandler(obj) {
-    setGameOver({
-      isOver: true,
-    });
+  function gameOverHandler() {
+    setGameOver(true);
   }
 
   function resetGame() {
@@ -26,14 +24,14 @@ export default function App() {
   return (
     <div className="main--cont">
       <Header />
-      {!gameOver.isOver && (
+      {!gameOver && (
         <Game
           data={results}
           isGameOver={gameOver}
           gameOverHandler={gameOverHandler}
         />
       )}
-      {gameOver.isOver && <button onClick={resetGame}>play again</button>}
+      {gameOver && <button onClick={resetGame}>play again</button>}
       <footer>Made by Aram Hekimian</footer>
     </div>
   );

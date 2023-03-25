@@ -9,20 +9,23 @@ body {
 * {
   margin: 0;
 }
-
-.main--cont {
+body {
   display: flex;
   flex-direction: column;
 }
 
+.main--cont {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 footer {
-  position: absolute;
   width: 100%;
-  bottom: 0;
   align-items: center;
   justify-content: center;
   display: flex;
   color: #f26b6b;
   font-size: 1.2em;
-  margin-bottom: 5px;
+  margin-top: auto;
 }
