@@ -5,7 +5,7 @@ import "./Game.css";
 export default function Game(props) {
   const [results, setResults] = React.useState([]);
   const [usedCards, setUsedCards] = React.useState([]);
-  const [level, setLevel] = React.useState(3);
+  const [level, setLevel] = React.useState();
 
   function shuffle(array) {
     const arr = array.sort(() => Math.random() - 0.5);
@@ -13,7 +13,7 @@ export default function Game(props) {
   }
   const shuffled = shuffle(props.data);
   React.useEffect(() => {
-    shuffled.slice(0, level).map((item) => {
+    shuffled.slice(0, props.level).map((item) => {
       fetch(item.url)
         .then((resp) => resp.json())
         .then((resp) =>
@@ -53,10 +53,10 @@ export default function Game(props) {
   }
 
   function checkIfWin() {
-    if (usedCards.length === level) {
-      setLevel((prevLevel) => prevLevel + 1);
+    if (usedCards.length === props.level) {
       setResults([]);
       setUsedCards([]);
+      props.roundOverHandler();
     }
   }
 

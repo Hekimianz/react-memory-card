@@ -1,0 +1,47 @@
+.roundOver--cont {
+  margin-left: auto;
+  margin-right: auto;
+  color: #f26b6b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.roundOver--btn {
+  font-size: 1.3em;
+  width: 150px;
+  padding: 10px 0;
+  background-color: #f23d3d;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.roundOver--text {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f26b6b;
+}
+
+.icon {
+  height: 1.5em;
+  filter: invert(83%) sepia(99%) saturate(0%) hue-rotate(108deg)
+    brightness(112%) contrast(100%);
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  transition: 0.3s all;
+}
+
+.roundOver--btn:hover > .icon {
+  transform: translate(10px);
+}
