@@ -1,0 +1,28 @@
+.play-again-btn {
+  font-size: 1.3em;
+  width: 150px;
+  padding: 10px 0;
+  background-color: #f23d3d;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gameOver--cont {
+  margin-left: auto;
+  margin-right: auto;
+  color: #f26b6b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.gameOver--text {
+  font-size: 3em;
+  font-weight: bold;
+}

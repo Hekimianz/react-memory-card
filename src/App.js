@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Game from "./components/Game";
+import GameOver from "./components/GameOver";
 export default function App() {
   const [data, setData] = React.useState([]);
   const [gameOver, setGameOver] = React.useState(false);
@@ -31,8 +32,14 @@ export default function App() {
           gameOverHandler={gameOverHandler}
         />
       )}
-      {gameOver && <button onClick={resetGame}>play again</button>}
-      <footer>Made by Aram Hekimian</footer>
+
+      {gameOver && <GameOver handleClick={resetGame} />}
+      <footer>
+        Made by
+        <a href="https://github.com/Hekimianz" target="_blank" rel="noreferrer">
+          Aram Hekimian
+        </a>
+      </footer>
     </div>
   );
 }

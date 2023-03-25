@@ -28,4 +28,17 @@ footer {
   color: #f26b6b;
   font-size: 1.2em;
   margin-top: auto;
+  height: 40px;
+}
+
+a {
+  color: #f26b6b;
+  text-decoration: none;
+  margin-left: 0.2em;
+  transition: 0.3s all;
+}
+
+a:hover {
+  color: #f23d3d;
+  font-size: 1.1em;
 }

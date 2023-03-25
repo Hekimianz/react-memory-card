@@ -8,19 +8,7 @@
   justify-content: center;
 }
 
-.header--score-cont {
-  display: none;
-  margin-left: 32.5%;
-  font-size: 1.3em;
-}
-
 .divider {
   margin: 0 3px;
   color: #f23d3d;
-}
-
-@media screen and (min-width: 870px) {
-  .header--score-cont {
-    display: inline;
-  }
 }

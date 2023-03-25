@@ -26,3 +26,15 @@
 .card--cont:hover {
   transform: scale(1.1);
 }
+
+@media (min-width: 830px) {
+  .card--name {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card--name {
+    font-size: 1.6em;
+  }
+}
